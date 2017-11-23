@@ -5,7 +5,7 @@ export default class Task extends Component {
 		return (
 			<div>
 				<div class="head">
-					<h3>{this.props.task.title}</h3>
+					<h3>{this.props.task.name}</h3>
 				</div>
 
 				<div className="body">
