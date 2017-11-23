@@ -1,3 +1,7 @@
+* {
+	font-family: 'Ubuntu Mono', monospace;
+}
+
 html,
 body {
 	margin: 0;
@@ -9,4 +13,46 @@ li {
 
 a {
 	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+#head {
+	padding: 8px;
+	margin: 8px;
+}
+
+#cont {
+	display: flex;
+	padding: 8px;
+
+	> div {
+		background: #333;
+		color: #fff;
+		padding: 8px;
+		margin: 8px;
+
+		> div {
+			padding: 8px;
+		}
+
+		.head {
+			h3 {
+				padding: 8px;
+			}
+		}
+
+		.body {
+			span {
+				display: block;
+			}
+		}
+	}
 }
