@@ -2,6 +2,15 @@
 	font-family: 'Ubuntu Mono', monospace;
 }
 
+#head,
+.head {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
 html,
 body {
 	margin: 0;
@@ -27,31 +36,42 @@ h6 {
 #head {
 	padding: 8px;
 	margin: 8px;
+
+	h1 {
+		padding: 8px;
+		margin: 8px;
+	}
 }
 
 #cont {
 	display: flex;
+	flex-wrap: wrap;
 	padding: 8px;
 
 	> div {
-		background: #333;
-		color: #fff;
-		padding: 8px;
+		width: 260px;
 		margin: 8px;
 
-		> div {
-			padding: 8px;
-		}
-
 		.head {
+			padding: 8px;
+			border-radius: 6px 6px 0 0;
+			background: #333;
+			color: #fff;
+
 			h3 {
 				padding: 8px;
 			}
 		}
 
 		.body {
-			span {
-				display: block;
+			padding: 8px;
+
+			> div {
+				padding: 8px;
+
+				span {
+					display: block;
+				}
 			}
 		}
 	}
