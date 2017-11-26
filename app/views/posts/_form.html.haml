@@ -1,12 +1,15 @@
 = form_with(model: post, local: true) do |form|
-  = form.label :name
-  = form.text_field :name, autofocus: true
+  %div
+    = form.label :name
+    = form.text_field :name, autofocus: true
 
-  = form.label :expr, "RegEx"
-  = form.text_field :expr
+  %div
+    = form.label :expr, "RegEx"
+    = form.text_field :expr
 
-  = form.label :eg, "Example string"
-  = form.text_field :eg
+  %div
+    = form.label :eg, "Example string"
+    = form.text_field :eg
 
   - if post.errors.any?
     #error_explanation
@@ -17,4 +20,4 @@
         - post.errors.full_messages.each do |message|
           %li= message
   .actions
-    = form.submit
+    = form.submit "Submit"
