@@ -1,3 +1,6 @@
+#head
+  = render 'form', post: @post
+
 #cont
   - @posts.each do |post|
     %div
@@ -9,4 +12,5 @@
           %code= post.expr
 
         %pre
-          %code= post.expr.match(post.eg)
+          - expr = Regexp.new(post.expr)
+          %code= expr.match(post.eg)
