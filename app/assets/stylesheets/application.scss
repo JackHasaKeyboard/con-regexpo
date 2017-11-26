@@ -13,3 +13,75 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+#head,
+.head {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+html,
+body {
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+#head {
+	padding: 8px;
+	margin: 8px;
+
+	h1 {
+		padding: 8px;
+		margin: 8px;
+	}
+}
+
+#cont {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 8px;
+
+	> div {
+		width: 260px;
+		margin: 8px;
+
+		.head {
+			border-radius: 6px 6px 0 0;
+			background: #333;
+			color: #fff;
+
+			h3 {
+				padding: 8px;
+			}
+		}
+
+		.body {
+			> div {
+				padding: 8px;
+			}
+		}
+	}
+}
