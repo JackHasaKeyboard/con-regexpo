@@ -1,4 +1,13 @@
 = form_with(model: post, local: true) do |form|
+  = form.label :name
+  = form.text_field :name, autofocus: true
+
+  = form.label :expr, "RegEx"
+  = form.text_field :expr
+
+  = form.label :eg, "Example string"
+  = form.text_field :eg
+
   - if post.errors.any?
     #error_explanation
       %h2
