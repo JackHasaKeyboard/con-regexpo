@@ -97,3 +97,12 @@ h6 {
 		}
 	}
 }
+
+pre {
+	margin: 0;
+
+	.hljs {
+		display: inline-block;
+		width: calc(100% - 16px);
+	}
+}
