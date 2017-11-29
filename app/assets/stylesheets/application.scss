@@ -18,15 +18,6 @@
 	font-family: 'Ubuntu Mono', monospace;
 }
 
-#head,
-.head {
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-}
-
 html,
 body {
 	margin: 0;
@@ -47,6 +38,25 @@ h4,
 h5,
 h6 {
 	margin: 0;
+}
+
+pre {
+	margin: 0;
+
+	.hljs {
+		display: inline-block;
+		width: calc(100% - 16px);
+	}
+}
+
+#head,
+.head,
+.body pre:not(.expr) {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 #head {
@@ -95,14 +105,11 @@ h6 {
 				padding: 8px;
 			}
 		}
-	}
-}
 
-pre {
-	margin: 0;
-
-	.hljs {
-		display: inline-block;
-		width: calc(100% - 16px);
+		.body {
+			.expr {
+				cursor: pointer;
+			}
+		}
 	}
 }
