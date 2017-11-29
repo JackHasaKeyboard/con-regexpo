@@ -12,6 +12,10 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
+//= require jquery.turbolinks
 //= require_tree .
 
-hljs.initHighlightingOnLoad();
+$(document).ready(function() {
+	hljs.initHighlightingOnLoad();
+});
