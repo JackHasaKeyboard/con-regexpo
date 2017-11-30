@@ -69,6 +69,17 @@ pre {
 		margin: 8px;
 	}
 
+	img {
+		height: 60px;
+		border-radius: 3px;
+	}
+
+	div:nth-child(1) {
+		> * {
+			margin: 8px;
+		}
+	}
+
 	form {
 		margin-left: auto;
 		padding: 4px;
