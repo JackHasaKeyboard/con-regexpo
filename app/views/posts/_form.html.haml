@@ -1,15 +1,23 @@
 = form_with(model: post, local: true) do |form|
-  %div
-    = form.label :name
-    = form.text_field :name, autofocus: true
+  %table
+    %tr
+      %td
+        = form.label :name
+        = form.text_field :name, autofocus: true
 
-  %div
-    = form.label :expr, "RegEx"
-    = form.text_field :expr
+    %tr
+      %td
+        = form.label :expr, "RegEx"
+        = form.text_field :expr
 
-  %div
-    = form.label :eg, "Example string"
-    = form.text_field :eg
+      %td
+        = form.label :flav, "Flavour"
+        = form.select :flav, ["Java", "JavaScript", "PCRE", "Python"]
+
+    %tr
+      %td
+        = form.label :eg, "Example string"
+        = form.text_field :eg
 
   - if post.errors.any?
     #error_explanation
