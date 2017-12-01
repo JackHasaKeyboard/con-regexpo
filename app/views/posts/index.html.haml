@@ -15,6 +15,7 @@
           - expr = Regexp.new(post.expr)
           %code= expr.match(post.eg)
 
-        %pre#cap
-          - expr.match(post.eg).captures.each_with_index do |cap, i|
-            %code= "[#{i}]: #{cap}"
+        - if expr.match(post.eg)
+          %pre#cap
+            - expr.match(post.eg).captures.each_with_index do |cap, i|
+              %code= "[#{i}]: #{cap}"
