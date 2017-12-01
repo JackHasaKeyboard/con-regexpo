@@ -18,4 +18,20 @@
 
 $(document).ready(function() {
 	hljs.initHighlightingOnLoad();
+
+	$('.expr').click(function() {
+		if (window.getSelection) {
+      selection = window.getSelection();
+
+      range = document.createRange();
+      range.selectNodeContents(this);
+
+      selection.removeAllRanges();
+      selection.addRange(range);
+    } else if (document.body.createTextRange) {
+      range = document.body.createTextRange();
+      range.moveToElementText(this);
+      range.select();
+    }
+	});
 });
