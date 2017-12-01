@@ -84,15 +84,21 @@ pre {
 		margin-left: auto;
 		padding: 4px;
 
-		div {
-			display: flex;
-
-			> * {
+		table,
+		.actions {
+			* {
 				margin: 4px;
 			}
+		}
 
-			input {
-				margin-left: auto;
+		table {
+			label {
+				display: inline-block;
+			}
+
+			input,
+			select {
+				float: right;
 			}
 		}
 	}
