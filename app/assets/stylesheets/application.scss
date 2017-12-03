@@ -114,12 +114,25 @@ pre {
 		margin: 8px;
 
 		.head {
+			display: flex;
 			border-radius: 6px 6px 0 0;
+			padding: 8px;
 			background: #333;
 			color: #fff;
 
-			h3 {
+			* {
 				padding: 8px;
+				line-height: 10px;
+			}
+
+			h3 {
+				overflow: scroll;
+			}
+
+			h5 {
+				margin-left: auto;
+				background: #222;
+				border-radius: 6px;
 			}
 		}
 
