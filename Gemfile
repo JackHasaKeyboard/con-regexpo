@@ -6,6 +6,9 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'pg', '~> 0.21.0'
+gem 'rails_12factor', '~> 0.0.3', group: :production # necessary for Heroku
+
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'jquery-turbolinks', '~> 2.1'
 gem 'haml', '~> 5.0', '>= 5.0.4'
@@ -15,8 +18,6 @@ gem 'omniauth-github', '~> 1.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
