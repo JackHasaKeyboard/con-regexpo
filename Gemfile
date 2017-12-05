@@ -6,6 +6,13 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'jquery-turbolinks', '~> 2.1'
+gem 'haml', '~> 5.0', '>= 5.0.4'
+gem 'better_errors', '~> 2.4'
+
+gem 'omniauth-github', '~> 1.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
