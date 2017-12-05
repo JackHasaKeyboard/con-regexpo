@@ -14,6 +14,128 @@
  *= require_self
  */
 
-body {
-	background: red;
+* {
+	font-family: 'Ubuntu Mono', monospace;
 }
+
+html,
+body {
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+pre {
+	margin: 0;
+}
+
+#head,
+.head,
+.body pre:not(.expr) {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+#head {
+	display: flex;
+	padding: 8px;
+	background: #333;
+	color: #fff;
+
+	h1 {
+		padding: 8px;
+		margin: 8px;
+	}
+
+	img {
+		height: 60px;
+		border-radius: 3px;
+	}
+
+	div:nth-child(1) {
+		> * {
+			margin: 8px;
+		}
+	}
+
+	form {
+		margin-left: auto;
+		flex-shrink: 0;
+
+		table,
+		.actions {
+			* {
+				margin: 4px;
+			}
+		}
+
+		table {
+			label {
+				display: inline-block;
+			}
+
+			input,
+			select {
+				float: right;
+			}
+		}
+	}
+}
+
+#body {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 8px;
+
+	> div {
+		width: 260px;
+		margin: 8px;
+
+		.head {
+			display: flex;
+			border-radius: 6px 6px 0 0;
+			padding: 8px;
+			background: #333;
+			color: #fff;
+
+						 * {
+							 padding: 8px;
+							 line-height: 10px;
+						 }
+
+						 h3 {
+							 overflow: scroll;
+						 }
+
+						 h5 {
+							 margin-left: auto;
+							 background: #222;
+							 border-radius: 6px;
+						 }
+					 }
+
+					 .body {
+						 .expr {
+							 cursor: pointer;
+						 }
+					 }
+				 }
+			 }
