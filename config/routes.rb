@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   delete 'signout', to: 'sessions#destroy', as: 'signout'
 	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-	resources :posts
+	resources :posts, path: ""
 	root 'posts#index'
 end
