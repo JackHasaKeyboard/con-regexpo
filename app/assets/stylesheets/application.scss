@@ -53,6 +53,27 @@ pre {
 	margin: 0;
 }
 
+form {
+	input,
+	select,
+	label {
+		margin: 8px;
+	}
+
+	table {
+		border-collapse: collapse;
+
+		td {
+			display: flex;
+
+			input,
+			select	{
+				margin-left: auto;
+			}
+		}
+	}
+}
+
 #bar,
 .head,
 .body pre:not(.expr) {
