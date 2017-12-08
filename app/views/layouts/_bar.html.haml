@@ -1,0 +1,13 @@
+#bar
+  - if current_user.blank?
+    #signIn
+      %a{href: '/auth/github'}
+        = image_tag 'github.svg'
+        %div Sign in
+  - else
+    %div
+      = image_tag current_user.avatar_url
+
+    #ctrl
+      = link_to "New", new_post_path
+      = link_to "Sign out", signout_path, method: :delete
