@@ -112,6 +112,8 @@ form {
 }
 
 #cont {
+	overflow-y: auto;
+
 	> * {
 		margin: 8px;
 	}
