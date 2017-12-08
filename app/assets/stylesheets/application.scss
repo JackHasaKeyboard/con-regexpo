@@ -38,6 +38,7 @@ li {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 h1,
@@ -90,17 +91,19 @@ form {
 	background: #333;
 	color: #fff;
 
-	img {
-		height: 60px;
-		border-radius: 3px;
-	}
-
-	a {
-		display: block;
-	}
-
 	div {
-		padding: 8px;
+		> * {
+			margin: 8px;
+		}
+
+		img {
+			height: 60px;
+			border-radius: 3px;
+		}
+
+		a {
+			display: block;
+		}
 	}
 
 	#ctrl {
