@@ -1,11 +1,11 @@
 #post
   - @posts.each do |post|
     %div
-      %div.head
+      .head
         %h3= post.name
         %h5= post.flav
 
-      %div.body
+      .body
         %pre.expr
           %code= post.expr
 
@@ -14,6 +14,6 @@
           %code= expr.match(post.eg)
 
         - if expr.match(post.eg)
-          %pre#cap
+          %pre.cap
             - expr.match(post.eg).captures.each_with_index do |cap, i|
               %code= "[#{i}]: #{cap}"
