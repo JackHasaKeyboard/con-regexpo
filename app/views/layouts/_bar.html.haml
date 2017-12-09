@@ -9,5 +9,8 @@
       = image_tag current_user.avatar_url
 
     #ctrl
-      = link_to "New", new_post_path
-      = link_to "Sign out", signout_path, method: :delete
+      %h5
+        = link_to "New", new_post_path
+
+      %h5
+        = link_to "Sign out", signout_path, method: :delete
