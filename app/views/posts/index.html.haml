@@ -18,3 +18,11 @@
             %code
               - expr.match(post.eg).captures.each_with_index do |cap, i|
                 %span= "[#{i}]: #{cap}"
+
+        - if current_user && post.user = current_user.id
+          .ctrl
+            %h5
+              = link_to "Edit", edit_post_path(post)
+
+            %h5
+              = link_to "Delete", post, method: :delete

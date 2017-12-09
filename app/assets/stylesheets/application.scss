@@ -153,6 +153,21 @@ form {
 			.expr {
 				cursor: pointer;
 			}
+
+			.ctrl {
+				padding: 4px;
+				display: flex;
+				background: #333;
+				color: #fff;
+				border-radius: 0 0 6px 6px;
+
+				h5 {
+					margin: 4px;
+					padding: 8px;
+					background: #222;
+					border-radius: 6px;
+				}
+			}
 		}
 	}
 }
