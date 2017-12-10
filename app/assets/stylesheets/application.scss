@@ -63,22 +63,16 @@ pre {
 }
 
 form {
-	input,
-	select,
-	label {
-		margin: 8px;
-	}
+	div {
+		display: flex;
 
-	table {
-		border-collapse: collapse;
+		input,
+		label {
+			margin: 8px;
+		}
 
-		td {
-			display: flex;
-
-			input,
-			select	{
-				margin-left: auto;
-			}
+		input:nth-child(2)	{
+			margin-left: auto;
 		}
 	}
 }
@@ -138,12 +132,6 @@ form {
 
 			h3 {
 				overflow-x: auto;
-			}
-
-			h5 {
-				margin-left: auto;
-				background: #222;
-				border-radius: 6px;
 			}
 		}
 
