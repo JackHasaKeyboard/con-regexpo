@@ -15,6 +15,7 @@ gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'better_errors', '~> 2.4'
 
 gem 'omniauth-github', '~> 1.3'
+gem 'friendly_id', '~> 5.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
