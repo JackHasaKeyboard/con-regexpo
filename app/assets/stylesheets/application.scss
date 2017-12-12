@@ -76,9 +76,10 @@ form {
 	background: #333;
 	color: #fff;
 
-	div {
+	> div {
 		> * {
 			margin: 8px;
+			display: block;
 		}
 
 		img {
@@ -94,6 +95,7 @@ form {
 
 #cont {
 	overflow-y: auto;
+	flex-grow: 1;
 
 	> * {
 		margin: 8px;
