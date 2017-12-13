@@ -1,7 +1,8 @@
 #post
   %div
     .head
-      %h3= @post.name
+      %a{href: @post.slug}
+        %h3= @post.name
 
     .body
       %pre.expr
