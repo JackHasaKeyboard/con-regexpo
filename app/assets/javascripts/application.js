@@ -11,13 +11,14 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require jquery
-//= require jquery.turbolinks
+//= require turbolinks
 //= require_tree .
+//= require_self
 
-$(document).ready(function() {
-	hljs.initHighlightingOnLoad();
+$(document).on('turbolinks:load', function() {
+	hljs.initHighlighting.called = false;
+	hljs.initHighlighting();
 
 	$('.expr').click(function() {
 		if (window.getSelection) {
@@ -35,3 +36,6 @@ $(document).ready(function() {
     }
 	});
 });
+
+document.addEventListener("turbolinks:load", function() {
+})

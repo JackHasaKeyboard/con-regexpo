@@ -10,7 +10,6 @@ gem 'pg', '~> 0.21.0'
 gem 'rails_12factor', '~> 0.0.3', group: :production # necessary for Heroku
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-gem 'jquery-turbolinks', '~> 2.1'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'better_errors', '~> 2.4'
 
