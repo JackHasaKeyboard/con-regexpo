@@ -105,11 +105,11 @@ form {
 #post {
 	display: flex;
 	flex-wrap: wrap;
-	overflow-y: auto;
 	align-content: flex-start;
 	margin: 0;
 
 	> div {
+		flex-shrink: 0;
 		width: 260px;
 		margin: 8px;
 
