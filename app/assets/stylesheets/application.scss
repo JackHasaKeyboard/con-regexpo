@@ -107,49 +107,58 @@ form {
 	flex-wrap: wrap;
 	align-content: flex-start;
 	margin: 0;
+}
 
-	> div {
-		flex-shrink: 0;
-		width: 260px;
-		margin: 8px;
+#disp {
+	display: flex;
+	margin: 0;
 
-		.head {
-			display: flex;
-			border-radius: 6px 6px 0 0;
+	.post {
+		flex-grow: 1;
+	}
+}
+
+.post {
+	flex-shrink: 0;
+	width: 260px;
+	margin: 8px;
+
+	.head {
+		display: flex;
+		border-radius: 6px 6px 0 0;
+		padding: 8px;
+		background: #333;
+		color: #fff;
+
+		h3 {
+			overflow-x: auto;
+			line-height: 10px;
 			padding: 8px;
-			background: #333;
-			color: #fff;
+		}
+	}
 
-			h3 {
-				overflow-x: auto;
-				line-height: 10px;
-				padding: 8px;
-			}
+	.body {
+		.expr code {
+			cursor: pointer;
+			-webkit-user-select: text;
+			-khtml-user-select: text;
+			-moz-user-select: text;
+			-o-user-select: text;
+			user-select: text;
 		}
 
-		.body {
-			.expr code {
-				cursor: pointer;
-				-webkit-user-select: text;
-				-khtml-user-select: text;
-				-moz-user-select: text;
-				-o-user-select: text;
-				user-select: text;
-			}
+		.ctrl {
+			padding: 4px;
+			display: flex;
+			background: #333;
+			color: #fff;
+			border-radius: 0 0 6px 6px;
 
-			.ctrl {
-				padding: 4px;
-				display: flex;
-				background: #333;
-				color: #fff;
-				border-radius: 0 0 6px 6px;
-
-				h5 {
-					margin: 4px;
-					padding: 8px;
-					background: #222;
-					border-radius: 6px;
-				}
+			h5 {
+				margin: 4px;
+				padding: 8px;
+				background: #222;
+				border-radius: 6px;
 			}
 		}
 	}

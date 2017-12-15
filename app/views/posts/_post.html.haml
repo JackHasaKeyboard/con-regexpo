@@ -1,0 +1,32 @@
+.post
+  .head
+    %a{href: post.slug}
+      %h3= post.name
+
+  .body
+    %pre.hljs.expr
+      %code.ruby
+        %span.hljs-regexp= "/#{ post.expr }/"
+
+    %pre.hljs
+      - expr = Regexp.new(post.expr)
+      %code.ruby
+        %span.hljs-string= expr.match(post.eg)
+
+    - if expr.match(post.eg).captures.any?
+      %code.hljs.cap
+        - expr.match(post.eg).captures.each_with_index do |cap, i|
+          %div
+            [
+            %span.hljs-number>= i
+            ]:
+            %span.hljs-string= cap
+
+    - if current_user && post.user = current_user.id
+      .ctrl
+        %h5
+          = link_to "Edit", edit_post_path(post)
+
+        %h5
+          = link_to "Delete", post, method: :delete
+

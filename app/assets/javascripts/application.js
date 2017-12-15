@@ -17,9 +17,6 @@
 //= require_self
 
 $(document).on('turbolinks:load', function() {
-	hljs.initHighlighting.called = false;
-	hljs.initHighlighting();
-
 	$('.expr').click(function() {
 		if (window.getSelection) {
       selection = window.getSelection();
